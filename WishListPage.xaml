@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyShoppingApp.WishListPage"
+             Title="Wish List Page">
+
+    <StackLayout Padding="10">
+        <Entry x:Name="CartNameEntry" Placeholder="Enter cart name"/>
+        <Button Text="Add Cart" Clicked="OnAddCartClicked"/>
+        <Button Text="Remove Cart" Clicked="OnRemoveCartClicked"/>
+        <Picker x:Name="CartPicker"/>
+        <Button Text="View Cart" Clicked="OnViewCartClicked"/>
+        <Button Text="Shop for Cart" Clicked="OnShopForCartClicked"/>
+
+        <Label Text="Cart Items:" FontAttributes="Bold" Margin="0,20,0,10"/>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Label Text="Name" FontAttributes="Bold" Grid.Row="0" Grid.Column="0"/>
+            <Label Text="Price" FontAttributes="Bold" Grid.Row="0" Grid.Column="1"/>
+            <Label Text="Quantity" FontAttributes="Bold" Grid.Row="0" Grid.Column="2"/>
+            <ListView x:Name="CartItemsListView" Grid.Row="1" Grid.ColumnSpan="3"/>
+        </Grid>
+
+        <Button Text="Checkout" Clicked="OnCheckoutClicked" Margin="0,20,0,0"/>
+        <Label x:Name="ReceiptLabel" Margin="0,20,0,0"/>
+    </StackLayout>
+
+</ContentPage>

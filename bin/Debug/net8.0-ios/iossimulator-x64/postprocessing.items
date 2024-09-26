@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <_PostProcessingItem Include="MyShoppingApp.app/MyShoppingApp">
+      <BCSymbolMapName>MyShoppingApp.bcsymbolmap</BCSymbolMapName>
+      <NoDSymUtil>true</NoDSymUtil>
+      <dSYMSourcePathExists>false</dSYMSourcePathExists>
+      <NoSymbolStrip>true</NoSymbolStrip>
+      <dSYMInfoPlistRelativePath>MyShoppingApp.app.dSYM\Contents\Info.plist</dSYMInfoPlistRelativePath>
+      <SymbolFile>/Users/dudleenpaul/Downloads/MyShoppingApp/obj/Debug/net8.0-ios/iossimulator-x64/mtouch-symbols.list</SymbolFile>
+      <DSymName>MyShoppingApp.app.dSYM</DSymName>
+      <SourceProjectPath>/Users/dudleenpaul/Downloads/MyShoppingApp</SourceProjectPath>
+    </_PostProcessingItem>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyShoppingApp.InventoryPage"
+             Title="Manage Inventory">
+
+    <StackLayout Padding="10">
+        <Button Text="Create Item" Clicked="OnCreateItemClicked" />
+        <Button Text="List Items" Clicked="OnListItemsClicked" />
+        <Button Text="Update Item" Clicked="OnShowUpdateFieldsClicked" />
+        <Button Text="Delete Item" Clicked="OnDeleteItemClicked" />
+
+        <Label x:Name="UpdateSectionLabel" Text="Update Item" IsVisible="False"/>
+        <Entry x:Name="UpdateItemIdEntry" Placeholder="Enter item ID" IsVisible="False"/>
+        <Entry x:Name="UpdateItemNameEntry" Placeholder="Enter new item name" IsVisible="False"/>
+        <Entry x:Name="UpdateItemDescriptionEntry" Placeholder="Enter new item description" IsVisible="False"/>
+        <Entry x:Name="UpdateItemPriceEntry" Placeholder="Enter new item price" IsVisible="False" Keyboard="Numeric"/>
+        <Entry x:Name="UpdateItemQuantityEntry" Placeholder="Enter new item quantity" IsVisible="False" Keyboard="Numeric"/>
+        <Switch x:Name="UpdateItemIsBogoSwitch" IsVisible="False"/>
+        <Label Text="Is BOGO" IsVisible="False" x:Name="UpdateItemIsBogoLabel"/>
+        <Entry x:Name="UpdateItemMarkdownEntry" Placeholder="Enter markdown amount" IsVisible="False" Keyboard="Numeric"/>
+        <Button Text="Commit Update" Clicked="OnCommitUpdateClicked" IsVisible="False" x:Name="CommitUpdateButton"/>
+
+        <ListView x:Name="ItemsListView">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding .}" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+
+</ContentPage>
